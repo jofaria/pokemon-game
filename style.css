@@ -1,0 +1,53 @@
+/* colors
+purple: #363b81
+baby blue: #5cb9ff
+red: #ff1f1f
+yellow: #fbd743
+*/
+
+body {
+  background-color: #363b81;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+}
+
+#canvas {
+  background-color: lightgray;
+}
+
+#start-btn,
+#restart-btn {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  height: 70px;
+  background-color: red;
+  border-top: red;
+  border-bottom: red;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hide canvas & gameover screen elements at the start */
+
+#canvas {
+  display: none;
+}
+
+#gameover-screen {
+  display: none;
+}
+
+#score {
+  display: none;
+}
