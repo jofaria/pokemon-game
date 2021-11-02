@@ -52,10 +52,10 @@ constructor() {
     if (this.y + 40 > canvas.height) {
       return true;
     } // collision with left wall
-    else if (this.x + 50 < 0) {
+    else if (this.x + 30 < 0) {
       return true;
     } // collision with right wall
-    else if (this.x + 100 > canvas.width) {
+    else if (this.x + 50 > canvas.width) {
       return true;
     } // collision with water
     else if (this.y < canvas.height - 400) {

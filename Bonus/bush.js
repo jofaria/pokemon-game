@@ -1,21 +1,21 @@
-class Koffing {
+class Bush {
   // properties
   constructor(yPos) {
     this.image = new Image();
-    this.image.src = "./images/koffing-static.gif"; // original size: 55x45
-    this.width = 55;
-    this.height = 45;
+    this.image.src = "../images/bush-no-background.png"; // original size: 602 × 414
+    this.width = 60.2;
+    this.height = 41.4;
     this.x = canvas.width;
     this.y = yPos + 500;
   }
 
   // methods
 
-  drawKoffing = () => {
+  drawBush = () => {
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
   };
 
-  koffingMove = () => {
-    this.x -= 5;
+  bushMove = () => {
+    this.x -= 6;
   };
 }
