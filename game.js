@@ -98,10 +98,11 @@ class Game {
     this.spawnPokeballs();
 
     // ---------- BUSH ----------
-    this.bushArr.forEach((eachBush) => {
-      eachBush.bushMove();
-    });
-    this.spawnBushes();
+
+    // this.bushArr.forEach((eachBush) => {
+    //   eachBush.bushMove();
+    // });
+    // this.spawnBushes();
 
     // ---------- COLLISIONS ----------
 
@@ -113,6 +114,10 @@ class Game {
 
     this.pokeballArr.forEach((eachPokeball, i) => {
       this.ash.ashPokeballCollision(eachPokeball, i);
+    });
+
+    this.bushArr.forEach((eachBush, i) => {
+      this.ash.ashBushCollision(eachBush, i);
     });
 
     // * 3. drawing the elements
@@ -129,6 +134,12 @@ class Game {
     // ---------- BUSH ----------
 
     if (this.ash.pokeballCollision > 10) {
+      this.spawnBushes();
+
+      this.bushArr.forEach((eachBush) => {
+        eachBush.bushMove();
+      });
+
       this.bushArr.forEach((eachBush) => {
         eachBush.drawBush();
       });

@@ -91,4 +91,15 @@ constructor() {
       return false;
     }
   };
+
+  ashBushCollision = (singleBush, index) => {
+    if (
+      this.x < singleBush.x + singleBush.width &&
+      this.x + this.width > singleBush.x &&
+      this.y < singleBush.y + singleBush.height &&
+      this.height + this.y > singleBush.y
+    ) {
+      console.log("collision with bush", singleBush, index);
+    }
+  };
 }
