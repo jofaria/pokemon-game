@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gotta Catch Em Pokeballs</title>
+    <title>Gotta Catch 'Em Pokeballs</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,32 +12,35 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@300;400&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <!-- ----- loading and intro screen ----- -->
+      <!-- ------- loading and intro screen ------- -->
 
       <div id="splash-screen" class="container">
-        <img src="./images/poke_logo.png" width="500" alt="logo" />
+        <img src="./images/poke_logo_scratched.png" width="500" alt="logo" />
+        <h1>POKEBALLS</h1>
 
-        <!-- ----- instructions ----- -->
+        <!-- -instructions - -->
 
         <div id="instructions">
-          <h2>Let's catch some pokeballs!</h2>
           <div class="instruction">
             <img src="./images/spinning-pokeball.gif" alt="" />
             <p>Catch as many pokeballs as you can.</p>
           </div>
           <div class="instruction">
             <img src="./images/single-koffing.png" alt="" />
-            <p>But be careful with Koffings! They are quite poisonous.</p>
+            <p>But be careful with Koffings! They're poisonous.</p>
           </div>
           <div class="instruction">
             <img src="./images/bush-no-background.png" alt="" />
-            <p>
-              To win the game, catch a Pikachu! You never know when one might be
-              hiding behind the bushes...
-            </p>
+            <p>To win the game, try to find a Pikachu...</p>
           </div>
         </div>
 
@@ -54,20 +57,18 @@
 
       <div id="gameover-screen" class="container">
         <h2 id="game-over">GAME OVER</h2>
-        <img id='ash-lost-img'src="./images/ash-lost.gif" alt="logo" />
+        <img id="ash-lost-img" src="./images/ash-lost.gif" alt="logo" />
         <button id="restart-btn">RESTART!</button>
       </div>
     </div>
 
     <!-- ----- Win game screen ----- -->
+
     <div id="win-game-screen">
       <div id="win-container">
-        <!-- <video width="671" height="600" controls autoplay>
-        <source
-          src="./Bonus/videos/catching-pikachu-trimmed.mov"
-          type="video/mp4"
-        />
-      </video> -->
+        <!-- <video id="pikachu-caught" autoplay>
+          <source src="./Bonus/videos/pikachu-caught.mov" type="video/mp4" />
+        </video> -->
         <h2>YOU WON!</h2>
         <div id="bg-container">
           <img id="ash-pikachu" src="./images/ash-and-pikachu.gif" />
