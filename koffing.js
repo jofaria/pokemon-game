@@ -2,7 +2,7 @@ class Koffing {
   // properties
   constructor(yPos) {
     this.image = new Image();
-    this.image.src = "./images/koffing-static.gif"; // original size: 55x45
+    this.image.src = "./images/single-koffing.png"; // original size: 55x45
     this.width = 55;
     this.height = 45;
     this.x = canvas.width;

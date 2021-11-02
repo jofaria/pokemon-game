@@ -6,7 +6,7 @@ class Bush {
     this.width = 60.2;
     this.height = 41.4;
     this.x = canvas.width;
-    this.y = yPos + 500;
+    this.y = yPos + 550; // works with 500 as well
   }
 
   // methods

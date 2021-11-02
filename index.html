@@ -18,8 +18,29 @@
       <!-- ----- loading and intro screen ----- -->
 
       <div id="splash-screen" class="container">
-        <!-- <img src="./images/ash-now.gif" width="500" alt="logo" /> -->
         <img src="./images/poke_logo.png" width="500" alt="logo" />
+
+        <!-- ----- instructions ----- -->
+
+        <div id="instructions">
+          <h2>Let's catch some pokeballs!</h2>
+          <div class="instruction">
+            <img src="./images/spinning-pokeball.gif" alt="" />
+            <p>Catch as many pokeballs as you can.</p>
+          </div>
+          <div class="instruction">
+            <img src="./images/single-koffing.png" alt="" />
+            <p>But be careful with Koffings! They are quite poisonous.</p>
+          </div>
+          <div class="instruction">
+            <img src="./images/bush-no-background.png" alt="" />
+            <p>
+              To win the game, catch a Pikachu! You never know when one might be
+              hiding behind the bushes...
+            </p>
+          </div>
+        </div>
+
         <button id="start-btn">START</button>
       </div>
 
@@ -33,13 +54,30 @@
 
       <div id="gameover-screen" class="container">
         <h2 id="game-over">GAME OVER</h2>
-        <!-- <img src="./images/green-background.jpeg" width="500" alt="logo" /> -->
-        <button id="restart-btn">PLAY AGAIN!</button>
+        <img src="./images/ash-lost.gif" alt="logo" />
+        <button id="restart-btn">RESTART!</button>
       </div>
     </div>
 
-    <!-- Win game screen -->
-    <div id="win-game-screen"></div>
+    <!-- ----- Win game screen ----- -->
+    <div id="win-game-screen">
+      <div id="win-container">
+        <!-- <video width="671" height="600" controls autoplay>
+        <source
+          src="./Bonus/videos/catching-pikachu-trimmed.mov"
+          type="video/mp4"
+        />
+      </video> -->
+        <h2>YOU WON!</h2>
+        <div id="bg-container">
+          <img id="ash-pikachu" src="./images/ash-and-pikachu.gif" />
+        </div>
+        <button id="play-again-btn">
+          PLAY <br />
+          AGAIN!
+        </button>
+      </div>
+    </div>
 
     <script src="./main.js"></script>
     <script src="./game.js"></script>

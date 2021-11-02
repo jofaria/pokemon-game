@@ -16,11 +16,41 @@ body {
   background-color: lightgray;
 }
 
-#start-btn,
 #restart-btn {
   font-family: "Montserrat", sans-serif;
   font-family: "Press Start 2P", cursive;
-  height: 70px;
+  height: 160px;
+  box-shadow: 5px 5px 3px rgb(117, 2, 2);
+  background-color: red;
+  border-top: red;
+  border-bottom: red;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+#start-btn {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  height: 115px;
+  box-shadow: 5px 5px 3px rgb(117, 2, 2);
+  background-color: red;
+  border-top: red;
+  border-bottom: red;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+#play-again-btn {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  height: 135px;
+  box-shadow: 5px 5px 3px rgb(117, 2, 2);
   background-color: red;
   border-top: red;
   border-bottom: red;
@@ -38,10 +68,14 @@ body {
   align-items: center;
 }
 
-/* hide canvas & gameover screen elements at the start */
-
 #canvas {
   display: none;
+}
+
+#instructions {
+  width: 1000px;
+  margin: 10px;
+  line-height: 1.7;
 }
 
 #gameover-screen {
@@ -50,4 +84,51 @@ body {
 
 #score {
   display: none;
+}
+
+#win-game-screen {
+  display: none;
+  justify-content: center;
+}
+
+#win-game-screen h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#splash-screen h2 {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.instruction {
+  display: flex;
+}
+
+.instruction img {
+  height: 60px;
+  width: auto;
+}
+
+#ash-pikachu {
+  height: 100px;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+#bg-container {
+  display: flex;
+  height: 600px;
+  width: 1000px;
+  background-image: url("./images/win-game-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#win-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

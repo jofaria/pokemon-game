@@ -11,6 +11,8 @@ let startButton = document.querySelector("#start-btn");
 let restartButton = document.querySelector("#restart-btn");
 let splashScreen = document.querySelector("#splash-screen");
 let gameoverScreen = document.querySelector("#gameover-screen");
+let winGameScreen = document.querySelector("#win-game-screen");
+let playAgainBtn = document.querySelector("#play-again-btn");
 
 // game object
 let game;
@@ -44,10 +46,21 @@ const restartGame = () => {
   game.gameLoop();
 };
 
+const playAgain = () => {
+  winGameScreen.style.display = "none";
+
+  canvas.style.display = "flex";
+  score.style.display = "flex";
+
+  game = new Game();
+  game.gameLoop();
+};
+
 // * ADD EVENT LISTENERS
 
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", restartGame);
+playAgainBtn.addEventListener("click", playAgain);
 
 window.addEventListener("keydown", (event) => {
   game.ash.ashMove(event);

@@ -9,21 +9,8 @@ class Ash {
     this.y = canvas.height - 200;
     this.ashSpeed = 30;
     this.pokeballCollision = 0;
+    this.bushCollision = 0;
   }
-
-  /* ASH AND PIKACHU
-
-constructor() {
-    this.ashImage = new Image();
-    this.ashImage.src = "./images/ash-and-pikachu.gif"; // original size: 233 x 166
-    this.width = 93.2; // 40% smaller
-    this.height = 66.4;
-    this.x = canvas.width / 5;
-    this.y = canvas.height - 200;
-    this.ashSpeed = 30;
-    this.pokeballCollision = 0;
-  }
-*/
 
   // methods
 
@@ -99,7 +86,7 @@ constructor() {
       this.y < singleBush.y + singleBush.height &&
       this.height + this.y > singleBush.y
     ) {
-      console.log("collision with bush", singleBush, index);
+      this.bushCollision++;
     }
   };
 }

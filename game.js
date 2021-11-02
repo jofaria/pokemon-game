@@ -1,5 +1,6 @@
 class Game {
-  // properties
+  // ----------------------------------- PROPERTIES -----------------------------------
+
   constructor() {
     this.background = new Image();
     this.background.src = "./images/background_edited.jpeg";
@@ -7,7 +8,6 @@ class Game {
     this.koffingArr = [new Koffing(0)];
     this.pokeballArr = [new Pokeball(0)];
     this.bushArr = [new Bush(0)];
-    // this.grassArr = [new Grass(0)];
     this.koffingAppearingDistance = 50;
     this.pokeballAppearingDistance = 900; // works with 900
     this.bushAppearingDistance = 100; // works with 100
@@ -15,7 +15,10 @@ class Game {
     this.scoreSpan = document.querySelector("#score-span");
   }
 
-  // methods
+  // ----------------------------------- METHODS -----------------------------------
+
+  // GAME OVER FUNCTION
+
   gameOver = () => {
     // stop the game
     this.isGameOver = true;
@@ -25,6 +28,19 @@ class Game {
 
     // show restart page
     gameoverScreen.style.display = "flex";
+  };
+
+  // WIN GAME FUNCTION
+
+  winGame = () => {
+    // stop the game
+    this.isGameOver = true;
+
+    // hide canvas
+    canvas.style.display = "none";
+
+    // show restart page
+    winGameScreen.style.display = "flex";
   };
 
   spawnKoffings = () => {
@@ -97,13 +113,6 @@ class Game {
 
     this.spawnPokeballs();
 
-    // ---------- BUSH ----------
-
-    // this.bushArr.forEach((eachBush) => {
-    //   eachBush.bushMove();
-    // });
-    // this.spawnBushes();
-
     // ---------- COLLISIONS ----------
 
     this.koffingArr.forEach((eachKoffing) => {
@@ -133,7 +142,8 @@ class Game {
 
     // ---------- BUSH ----------
 
-    if (this.ash.pokeballCollision > 10) {
+    if (this.ash.pokeballCollision > 2) {
+      // 20
       this.spawnBushes();
 
       this.bushArr.forEach((eachBush) => {
@@ -143,6 +153,11 @@ class Game {
       this.bushArr.forEach((eachBush) => {
         eachBush.drawBush();
       });
+    }
+
+    if (this.ash.bushCollision > 50) {
+      // 100
+      this.winGame();
     }
 
     // * 4. animation frame and game logic changes
