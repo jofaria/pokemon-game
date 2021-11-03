@@ -83,14 +83,25 @@ body {
 
 #score {
   display: none;
+  margin-top: 30px;
 }
 
 /* ? GAMEOVER SCREEN */
 
 #gameover-screen {
   display: none;
+  flex-direction: column;
+  justify-content: center;
 }
 
+#gameover-screen img {
+  height: 600px;
+  width: auto;
+}
+
+#game-over {
+  font-size: 30px;
+}
 #restart-btn {
   font-family: "Montserrat", sans-serif;
   font-family: "Press Start 2P", cursive;

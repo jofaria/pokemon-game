@@ -146,11 +146,20 @@ class Game {
       eachKoffing.drawKoffing();
     });
 
+    // Hi score sound
+
+    if (
+      this.ash.pokeballCollision !== 0 &&
+      this.ash.pokeballCollision % 10 === 0
+    ) {
+      this.highScoreSound.play();
+    }
+
     // ---------- BUSH ----------
 
-    if (this.ash.pokeballCollision > 2) {
+    if (this.ash.pokeballCollision > 39) {
+      this.background.src = "./images/almost-winning.jpg";
       // 20
-      this.highScoreSound.play();
       this.spawnBushes();
 
       this.bushArr.forEach((eachBush) => {
@@ -162,7 +171,7 @@ class Game {
       });
     }
 
-    if (this.ash.bushCollision > 10) {
+    if (this.ash.bushCollision > 50) {
       // 100
       this.winGame();
     }
