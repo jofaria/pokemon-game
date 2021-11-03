@@ -7,8 +7,7 @@ class Pokeball {
     this.height = 23;
     this.x = canvas.width;
     this.y = yPos + 550;
-    // -> 500 works well but there's a gap at the bottom and some pokeballs are almost in the water
-    // -> 550 works but it's close at the bottom and there's a big gap at the top
+    // -> 500 works but there's a gap at the bottom and some pokeballs are almost in the water
   }
 
   // methods

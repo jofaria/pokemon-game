@@ -1,5 +1,5 @@
 class Ash {
-  // properties
+  // ----------------------------------- PROPERTIES -----------------------------------
   constructor() {
     this.ashImage = new Image();
     this.ashImage.src = "./images/just-ash.gif"; // original size: 129 x 166
@@ -12,7 +12,7 @@ class Ash {
     this.bushCollision = 0;
   }
 
-  // methods
+  // ----------------------------------- METHODS -----------------------------------
 
   drawAsh = () => {
     ctx.drawImage(this.ashImage, this.x, this.y, this.width, this.height);
@@ -24,25 +24,22 @@ class Ash {
     if (buttonBeingClicked === "ArrowUp") {
       this.y -= this.ashSpeed;
     } else if (buttonBeingClicked === "ArrowDown") {
-      this.y += this.ashSpeed;
+      if (this.y + 100 < canvas.height) {
+        this.y += this.ashSpeed;
+      }
     } else if (buttonBeingClicked === "ArrowRight") {
       this.x += this.ashSpeed;
     } else if (buttonBeingClicked === "ArrowLeft") {
-      this.x -= this.ashSpeed;
+      if (this.x - 20 > 0) {
+        this.x -= this.ashSpeed;
+      }
     }
   };
 
-  // ! Collisions
+  // * Collisions
 
   ashWallCollision = () => {
-    // collision with floor
-    if (this.y + 40 > canvas.height) {
-      return true;
-    } // collision with left wall
-    else if (this.x + 30 < 0) {
-      return true;
-    } // collision with right wall
-    else if (this.x + 50 > canvas.width) {
+    if (this.x + 50 > canvas.width) {
       return true;
     } // collision with water
     else if (this.y < canvas.height - 400) {
@@ -59,8 +56,6 @@ class Ash {
     ) {
       game.pokeballArr.splice(index, 1);
       this.pokeballCollision++;
-
-      // sound plays
     }
   };
 
@@ -72,14 +67,12 @@ class Ash {
       this.height + this.y > singleKoffing.y
     ) {
       return true;
-      // cause the game to end
-      // create boolean for the game end and trigger
     } else {
       return false;
     }
   };
 
-  ashBushCollision = (singleBush, index) => {
+  ashBushCollision = (singleBush) => {
     if (
       this.x < singleBush.x + singleBush.width &&
       this.x + this.width > singleBush.x &&
@@ -90,3 +83,37 @@ class Ash {
     }
   };
 }
+
+// ** ALTERNATIVE LOGIC: game ends when ash falls off the background
+/*
+
+  ashMove = (event) => {
+    let buttonBeingClicked = event.code;
+
+    if (buttonBeingClicked === "ArrowUp") {
+      this.y -= this.ashSpeed;
+    } else if (buttonBeingClicked === "ArrowDown") {
+      this.y += this.ashSpeed;
+    } else if (buttonBeingClicked === "ArrowRight") {
+      this.x += this.ashSpeed;
+    } else if (buttonBeingClicked === "ArrowLeft") {
+      this.x -= this.ashSpeed;
+    }
+  };
+
+  ashWallCollision = () => {
+    // collision with floor
+    if (this.y + 40 > canvas.height) {
+      return true;
+    } // collision with left wall
+    else if (this.x + 30 < 0) {
+      return true;
+    } // collision with right wall
+    else if (this.x + 50 > canvas.width) {
+      return true;
+    } // collision with water
+    else if (this.y < canvas.height - 400) {
+      return true;
+    }
+  };
+  */

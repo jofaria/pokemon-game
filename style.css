@@ -5,13 +5,8 @@
 ! yellow: #fbd743
 ! */
 
-/* trying out this color: #1d2c5f */
-
 body {
   background-color: #1d2c5f;
-  /* background-image: url("./images/gameboy-no-background.png");
-  background-repeat: no-repeat;
-  background-size: cover; */
   font-family: "Montserrat", sans-serif;
   font-family: "Press Start 2P", cursive;
   color: white;
@@ -72,8 +67,6 @@ body {
   background-color: lightgray;
 }
 
-/* CHECK THIS */
-
 .container {
   display: flex;
   flex-direction: column;
@@ -88,6 +81,10 @@ body {
 
 /* ? GAMEOVER SCREEN */
 
+#game-over {
+  font-size: 30px;
+}
+
 #gameover-screen {
   display: none;
   flex-direction: column;
@@ -99,9 +96,6 @@ body {
   width: auto;
 }
 
-#game-over {
-  font-size: 30px;
-}
 #restart-btn {
   font-family: "Montserrat", sans-serif;
   font-family: "Press Start 2P", cursive;
@@ -114,19 +108,7 @@ body {
   color: white;
   padding: 20px;
   font-size: 12px;
-  margin-top: 40px;
-}
-
-/* ? INTRO FOR WIN GAME SCREEN */
-
-#pikachu-caught-container {
-  display: flex;
-  justify-content: center;
-}
-
-#pikachu-caught {
-  height: 600px;
-  width: auto;
+  margin-top: 30px;
 }
 
 /* ? WIN GAME SCREEN */
@@ -142,7 +124,7 @@ body {
 }
 
 #ash-pikachu {
-  height: 100px;
+  height: 150px;
   width: auto;
   margin-bottom: 50px;
 }
@@ -151,11 +133,11 @@ body {
   display: flex;
   height: 600px;
   width: 1000px;
-  background-image: url("./images/win-game-background.jpg");
+  background-image: url("./images/almost-winning.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 #win-container {
@@ -169,13 +151,13 @@ body {
   font-family: "Press Start 2P", cursive;
   line-height: 1.9;
   height: 135px;
-  box-shadow: 5px 5px 3px rgb(117, 2, 2);
+  box-shadow: 0 5px 3px rgb(117, 2, 2);
   background-color: red;
   border-top: red;
   border-bottom: red;
   border-radius: 50%;
   color: white;
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 30px;
 }

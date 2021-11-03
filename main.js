@@ -15,7 +15,6 @@ let gameoverScreen = document.querySelector("#gameover-screen");
 let winGameScreen = document.querySelector("#win-game-screen");
 let playAgainBtn = document.querySelector("#play-again-btn");
 
-// GAME OBJECTS
 let game;
 
 // * FUNCTIONS
@@ -35,24 +34,17 @@ const startGame = () => {
 
 const restartGame = () => {
   gameoverScreen.style.display = "none";
-
-  // show game screen
   canvas.style.display = "flex";
   score.style.display = "flex";
-
   game = new Game();
-
   game.gameLoop();
 };
 
 const playAgain = () => {
   winGameScreen.style.display = "none";
-
   canvas.style.display = "flex";
   score.style.display = "flex";
-
   game = new Game();
-  // game.winGameMusic.pause();
   game.gameLoop();
 };
 

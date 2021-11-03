@@ -59,7 +59,6 @@ class Game {
       let koffing = new Koffing(randomYPos);
       this.koffingArr.push(koffing);
     }
-    // set intervals will work, but it won't be the most efficient way
   };
 
   spawnPokeballs = () => {
@@ -72,7 +71,6 @@ class Game {
       let pokeball = new Pokeball(randomYPos);
       this.pokeballArr.push(pokeball);
     }
-    // set intervals will work, but it won't be the most efficient way
   };
 
   spawnBushes = () => {
@@ -124,7 +122,7 @@ class Game {
     this.koffingArr.forEach((eachKoffing) => {
       if (this.ash.ashKoffingCollision(eachKoffing)) {
         this.gameOver();
-      } // returns either true or false
+      }
     });
 
     this.pokeballArr.forEach((eachPokeball, i) => {
@@ -146,6 +144,8 @@ class Game {
       eachKoffing.drawKoffing();
     });
 
+    // * 4. animation frame and game logic changes
+
     // ---------- HIGH SCORE SOUND ----------
 
     if (
@@ -155,9 +155,9 @@ class Game {
       this.highScoreSound.play();
     }
 
-    // ---------- BUSH ----------
+    // ---------- SPAWN BUSHES ----------
 
-    if (this.ash.pokeballCollision > 34) {
+    if (this.ash.pokeballCollision > 37) {
       this.background.src = "./images/almost-winning.jpg";
       // 20
       this.spawnBushes();
@@ -171,12 +171,13 @@ class Game {
       });
     }
 
+    // ---------- WINNING GAME ----------
+
     if (this.ash.bushCollision > 75) {
-      // 100
       this.winGame();
     }
 
-    // * 4. animation frame and game logic changes
+    // ---------- GAME LOOP AND MUSIC ----------
 
     if (!this.isGameOver) {
       requestAnimationFrame(this.gameLoop);
