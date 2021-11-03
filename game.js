@@ -146,7 +146,7 @@ class Game {
       eachKoffing.drawKoffing();
     });
 
-    // Hi score sound
+    // ---------- HIGH SCORE SOUND ----------
 
     if (
       this.ash.pokeballCollision !== 0 &&
@@ -157,7 +157,7 @@ class Game {
 
     // ---------- BUSH ----------
 
-    if (this.ash.pokeballCollision > 39) {
+    if (this.ash.pokeballCollision > 34) {
       this.background.src = "./images/almost-winning.jpg";
       // 20
       this.spawnBushes();
@@ -171,7 +171,7 @@ class Game {
       });
     }
 
-    if (this.ash.bushCollision > 50) {
+    if (this.ash.bushCollision > 75) {
       // 100
       this.winGame();
     }
