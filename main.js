@@ -1,6 +1,7 @@
 // * GLOBAL VARIABLES
 
-//  canvas setup
+//  CANVAS
+
 let canvas = document.querySelector("#canvas");
 
 let ctx = canvas.getContext("2d");
@@ -14,7 +15,7 @@ let gameoverScreen = document.querySelector("#gameover-screen");
 let winGameScreen = document.querySelector("#win-game-screen");
 let playAgainBtn = document.querySelector("#play-again-btn");
 
-// game object
+// GAME OBJECTS
 let game;
 
 // * FUNCTIONS
@@ -26,23 +27,21 @@ const startGame = () => {
   // show game screen
   canvas.style.display = "flex";
   score.style.display = "flex";
-  // start the game
-  // we will have a class for the game that when I click the button we will create one element of that class
-  game = new Game();
 
+  // start the game
+  game = new Game();
   game.gameLoop();
 };
 
 const restartGame = () => {
   gameoverScreen.style.display = "none";
+
   // show game screen
   canvas.style.display = "flex";
   score.style.display = "flex";
 
-  // game.gameLoop() will not work
-  // you will need to create a new instance of the game
-  // you might need to restart some default vair
   game = new Game();
+
   game.gameLoop();
 };
 
@@ -53,6 +52,7 @@ const playAgain = () => {
   score.style.display = "flex";
 
   game = new Game();
+  // game.winGameMusic.pause();
   game.gameLoop();
 };
 

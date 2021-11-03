@@ -13,6 +13,10 @@ class Game {
     this.bushAppearingDistance = 100; // works with 100
     this.isGameOver = false;
     this.scoreSpan = document.querySelector("#score-span");
+    this.gameMusic = new Audio("./Bonus/audio/game-music.mp3");
+    this.gameoverMusic = new Audio("./Bonus/audio/lost.mov");
+    this.winGameMusic = new Audio("./Bonus/audio/win.mov");
+    this.highScoreSound = new Audio("./Bonus/audio/win-sound1.mp3");
   }
 
   // ----------------------------------- METHODS -----------------------------------
@@ -28,6 +32,7 @@ class Game {
 
     // show restart page
     gameoverScreen.style.display = "flex";
+    this.gameoverMusic.play();
   };
 
   // WIN GAME FUNCTION
@@ -41,6 +46,7 @@ class Game {
 
     // show restart page
     winGameScreen.style.display = "flex";
+    this.winGameMusic.play();
   };
 
   spawnKoffings = () => {
@@ -144,6 +150,7 @@ class Game {
 
     if (this.ash.pokeballCollision > 2) {
       // 20
+      this.highScoreSound.play();
       this.spawnBushes();
 
       this.bushArr.forEach((eachBush) => {
@@ -155,7 +162,7 @@ class Game {
       });
     }
 
-    if (this.ash.bushCollision > 50) {
+    if (this.ash.bushCollision > 10) {
       // 100
       this.winGame();
     }
@@ -164,6 +171,9 @@ class Game {
 
     if (!this.isGameOver) {
       requestAnimationFrame(this.gameLoop);
+      this.gameMusic.play();
+    } else {
+      this.gameMusic.pause();
     }
   };
 }

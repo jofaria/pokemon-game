@@ -1,34 +1,53 @@
-/* colors
-purple: #363b81
-baby blue: #5cb9ff
-red: #ff1f1f
-yellow: #fbd743
-*/
+/* ! colors
+! purple: #363b81
+! baby blue: #5cb9ff
+! red: #ff1f1f
+! yellow: #fbd743
+! */
+
+/* trying out this color: #1d2c5f */
 
 body {
-  background-color: #363b81;
+  background-color: #1d2c5f;
+  /* background-image: url("./images/gameboy-no-background.png");
+  background-repeat: no-repeat;
+  background-size: cover; */
   font-family: "Montserrat", sans-serif;
   font-family: "Press Start 2P", cursive;
   color: white;
 }
 
-#canvas {
-  background-color: lightgray;
+/* ? SPLASH SCREEN */
+
+#splash-screen {
+  padding: 50px 0 0 0;
 }
 
-#restart-btn {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Press Start 2P", cursive;
-  height: 130px;
-  box-shadow: 5px 5px 3px rgb(117, 2, 2);
-  background-color: red;
-  border-top: red;
-  border-bottom: red;
-  border-radius: 50%;
-  color: white;
-  padding: 20px;
-  font-size: 12px;
-  margin-top: 40px;
+#splash-screen h1 {
+  transform: rotate(7deg);
+  font-family: "Indie Flower", cursive;
+  /* font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive; */
+  font-size: 45px;
+  color: red;
+  text-indent: 350px;
+  margin: 0 0 40px 0;
+}
+
+#instructions {
+  width: 1000px;
+  margin: 10px;
+  line-height: 1.7;
+}
+
+.instruction {
+  display: flex;
+}
+
+.instruction img {
+  padding: 0 50px 15px 0;
+  width: 70px;
+  height: auto;
 }
 
 #start-btn {
@@ -46,21 +65,14 @@ body {
   margin-top: 40px;
 }
 
-#play-again-btn {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Press Start 2P", cursive;
-  line-height: 1.9;
-  height: 135px;
-  box-shadow: 5px 5px 3px rgb(117, 2, 2);
-  background-color: red;
-  border-top: red;
-  border-bottom: red;
-  border-radius: 50%;
-  color: white;
-  padding: 20px;
-  font-size: 16px;
-  margin-top: 40px;
+/* ? GAME SCREEN */
+
+#canvas {
+  display: none;
+  background-color: lightgray;
 }
+
+/* CHECK THIS */
 
 .container {
   display: flex;
@@ -69,23 +81,44 @@ body {
   align-items: center;
 }
 
-#canvas {
+#score {
   display: none;
 }
 
-#instructions {
-  width: 1000px;
-  margin: 10px;
-  line-height: 1.7;
-}
+/* ? GAMEOVER SCREEN */
 
 #gameover-screen {
   display: none;
 }
 
-#score {
-  display: none;
+#restart-btn {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  height: 130px;
+  box-shadow: 5px 5px 3px rgb(117, 2, 2);
+  background-color: red;
+  border-top: red;
+  border-bottom: red;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  font-size: 12px;
+  margin-top: 40px;
 }
+
+/* ? INTRO FOR WIN GAME SCREEN */
+
+#pikachu-caught-container {
+  display: flex;
+  justify-content: center;
+}
+
+#pikachu-caught {
+  height: 600px;
+  width: auto;
+}
+
+/* ? WIN GAME SCREEN */
 
 #win-game-screen {
   display: none;
@@ -95,30 +128,6 @@ body {
 #win-game-screen h2 {
   text-align: center;
   font-size: 30px;
-}
-
-#splash-screen {
-  padding: 50px 0 0 0;
-}
-#splash-screen h1 {
-  transform: rotate(6deg);
-  font-family: "Indie Flower", cursive;
-  /* font-family: "Montserrat", sans-serif;
-  font-family: "Press Start 2P", cursive; */
-  font-size: 40px;
-  color: red;
-  text-indent: 350px;
-  margin: 0 0 40px 0;
-}
-
-.instruction {
-  display: flex;
-}
-
-.instruction img {
-  padding: 0 50px 10px 0;
-  width: 100px;
-  height: auto;
 }
 
 #ash-pikachu {
@@ -142,4 +151,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#play-again-btn {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  line-height: 1.9;
+  height: 135px;
+  box-shadow: 5px 5px 3px rgb(117, 2, 2);
+  background-color: red;
+  border-top: red;
+  border-bottom: red;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 40px;
 }
