@@ -157,7 +157,7 @@ class Game {
 
     // ---------- SPAWN BUSHES ----------
 
-    if (this.ash.pokeballCollision > 37) {
+    if (this.ash.pokeballCollision > 24) {
       this.background.src = "./images/almost-winning.jpg";
       // 20
       this.spawnBushes();

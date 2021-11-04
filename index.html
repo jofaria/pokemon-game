@@ -24,12 +24,17 @@
       <!-- ------- loading and intro screen ------- -->
 
       <div id="splash-screen" class="container">
-        <img src="./images/poke_logo_scratched.png" width="500" alt="logo" />
+        <img id="logo" src="./images/poke_logo_scratched.png" alt="logo" />
         <h1>POKEBALLS</h1>
 
         <!-- -instructions - -->
 
         <div id="instructions">
+          <div class="instruction">
+            <img id="ash-gif" src="./images/just-ash.gif" alt="" />
+            <p>Help Ash move around the grass.</p>
+            <div><img id="arrows" src="./images/arrows-1.png" /></div>
+          </div>
           <div class="instruction">
             <img src="./images/spinning-pokeball.gif" alt="" />
             <p>Catch as many pokeballs as you can.</p>
@@ -56,9 +61,9 @@
       <!-- ----- gameover screen ----- -->
 
       <div id="gameover-screen" class="container">
-        <h2 id="game-over">GAME OVER</h2>
+        <h2 id="game-over">GAME OVER!</h2>
         <img id="ash-lost-img" src="./images/ash-lost.gif" alt="logo" />
-        <button id="restart-btn">RESTART!</button>
+        <button id="restart-btn">RESTART</button>
       </div>
     </div>
 
@@ -72,7 +77,7 @@
         </div>
         <button id="play-again-btn">
           PLAY <br />
-          AGAIN!
+          AGAIN
         </button>
       </div>
     </div>
