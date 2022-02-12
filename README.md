@@ -6,11 +6,9 @@ Welcome to this pokemon-inspired browser game. Read more about the project, such
 
 PLAY: [Gotta Catch'em Pokeballs](https://gotta-catch-em-pokeballs.netlify.app/)
 
-![alt text](images/screenshots/landing-page.png)
-![alt text](images/screenshots/level-one-view.png)
-![alt text](images/screenshots/level-two-view.png)
-![alt text](images/screenshots/win-view.png)
-![alt text](images/screenshots/game-over-view.png)
+<img src="images/screenshots/landing-page.png" width="400"> <img src="images/screenshots/level-one-view.png" width="433">
+<br>
+<img src="images/screenshots/level-two-view.png" width="400"> <img src="images/screenshots/win-view.png" width="425"> 
 
 ## Instructions
 
