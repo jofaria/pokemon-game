@@ -2,7 +2,11 @@
 
 //  CANVAS
 
-let canvas = document.querySelector("#canvas");
+//let canvas = document.querySelector("#canvas");
+let canvas = document.getElementById("canvas");
+
+console.log(canvas);
+console.log(canvas.width);
 
 let ctx = canvas.getContext("2d");
 

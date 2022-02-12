@@ -9,8 +9,8 @@ class Game {
     this.pokeballArr = [new Pokeball(0)];
     this.bushArr = [new Bush(0)];
     this.koffingAppearingDistance = 50;
-    this.pokeballAppearingDistance = 900; // works with 900
-    this.bushAppearingDistance = 100; // works with 100
+    this.pokeballAppearingDistance = 900;
+    this.bushAppearingDistance = 100;
     this.isGameOver = false;
     this.scoreSpan = document.querySelector("#score-span");
     this.gameMusic = new Audio("./Bonus/audio/game-music.mp3");
